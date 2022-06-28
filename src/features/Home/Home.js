@@ -1,42 +1,49 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ProductCard from '../../components/product-card/ProductCard';
 import TopHeader from './../../components/top-header/TopHeader';
 import { useDispatch, useSelector } from 'react-redux';
 import { productsAsync } from './ProductSlice';
-import SpinLoader from '../../components/spin-loader/SpinLoader';
+import SkeletonProductCard from './../../components/product-card/SkeletonProductCard';
 
 function Home(props) {
     const products = useSelector((state) => state.products.data)
-    const [loading, setLoading] = React.useState(true)
 
     const dispatch = useDispatch()
     React.useEffect(() => {
         dispatch(productsAsync())
-        setLoading(false)
     }, [dispatch])
     return (
         <>
+            <TopHeader />
 
-            {
-                loading ? <SpinLoader /> :
-                    <>
-                        <TopHeader />
-                        <div className='container mt-5'>
-                            <div className='row'>
+
+            <div className='container mt-5'>
+                <div className='row'>
+
+                    {
+                        !products ? (
+                            <>
                                 {
-                                    products?.map((ele) => {
-                                        return <div className='col-md-4 mt-4 mb-4'>
-                                            <ProductCard data={ele} key={ele.id} />
+                                    [...Array(12)].map((_, i) => {
+                                        return <div className='col-md-4 mt-4' key={i}>
+                                            <SkeletonProductCard />
                                         </div>
                                     })
                                 }
 
+                            </>
+                        )
+                            : (
+                                products?.map((ele) => {
+                                    return <div className='col-md-4 mt-4 mb-4'>
+                                        <ProductCard data={ele} key={ele.id} />
+                                    </div>
+                                })
+                            )
+                    }
 
-                            </div>
-                        </div>
-                    </>
-            }
-
+                </div>
+            </div>
         </>
     );
 }
