@@ -42,7 +42,7 @@ function AllProducts(props) {
             <div className='container mt-4'>
                 <h2>All Products List</h2>
                 <div className='row'>
-                    <div className='col-md-4'>
+                    <div className='col-md-4 mt-3 mb-3'>
                         <input type="text"
                             className='form-control'
                             placeholder='Search items'
@@ -67,6 +67,7 @@ function AllProducts(props) {
                             </>
                         )
                             : (
+
                                 displayPage?.map((ele) => {
                                     return <div className='col-md-4 mt-4 mb-4'>
                                         <ProductCard data={ele} key={ele?.id} />
@@ -74,15 +75,25 @@ function AllProducts(props) {
                                 })
                             )
                     }
-                    <div>
-                        <ReactPaginate
-                            pageCount={pageCount}
-                            onPageChange={changePage}
-                            previousLabel={"Prev"}
-                            nextLabel={"Next"}
-                            containerClassName=" paginationBttns "
-                        />
-                    </div>
+                    {
+                        displayPage.length === 0 ? <div className='col-md-12'>
+                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "60px", marginTop: "30px", background: "#80808040", borderRadius: "10px" }}> <h5>NO DATA FOUND</h5></div>
+                        </div> : null
+                    }
+
+                    {
+                        displayPage.length === 0 ? null : <div>
+                            <ReactPaginate
+                                pageCount={pageCount}
+                                onPageChange={changePage}
+                                previousLabel={"Prev"}
+                                nextLabel={"Next"}
+                                containerClassName=" paginationBttns "
+                            />
+                        </div>
+                    }
+
+
                 </div>
             </div>
         </>
