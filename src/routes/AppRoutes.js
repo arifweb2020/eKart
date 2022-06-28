@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
-import SpinLoader from './../comonents/spin-loader/SpinLoader';
+import SpinLoader from './../components/spin-loader/SpinLoader';
 
 const Home = React.lazy(() => import('./../features/Home/Home'));
+const SingleProducts = React.lazy(() => import('./../features/product-details/ProductDetails'));
 
 function AppRoutes(props) {
     return (
@@ -10,7 +11,8 @@ function AppRoutes(props) {
             
             <React.Suspense fallback={<SpinLoader />}>
                 <Routes>
-                    <Route exact path="/" element={<Home />} />
+                    <Route  path="/" element={<Home />} />
+                    <Route  path="/single-products/:id" element={<SingleProducts />} />
                 </Routes>
             </React.Suspense>
 
