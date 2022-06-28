@@ -29,13 +29,13 @@ function ProductDetails(props) {
     return (
         <div className='container mt-5 mb-5'>
             <button onClick={()=>navigate(-1)} className="btn btn-sm btn-primary">Go Back</button>
-            <h1>Product Details</h1>
+            <h2>Product Details</h2>
             {!data ? <SkeletonSingleProduct />
                 : <SingleProduct singleData={data} />
             }
 
             <div className='row mt-5'>
-                <h1>Category Releated</h1>
+                <h2>Releated Products</h2>
                 {
                         !data ? (
                             <>
