@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { productsAsync } from './ProductSlice';
 import SkeletonProductCard from './../../components/product-card/SkeletonProductCard';
 
+
 function Home(props) {
     //const products = useSelector((state) => state.products.data)
     const [products, setAllProducts] = React.useState([]);
