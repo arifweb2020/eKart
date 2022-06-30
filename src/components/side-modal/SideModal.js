@@ -17,6 +17,11 @@ function SlideModal() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const checkoutPage = ()=>{
+        navigate("/checkout")
+        setShow(false)
+    }
+
     return (
         <>
 
@@ -49,7 +54,7 @@ function SlideModal() {
                         <h6>
                             Subtotal : <span>${totalAmount.toFixed(2)}</span>
                         </h6>
-                        <button className='btn btn-md btn-secondry' onClick={() => navigate("/checkout")}>
+                        <button className='btn btn-md btn-secondry' onClick={checkoutPage}>
                             Checkout
                         </button>
                     </div>
