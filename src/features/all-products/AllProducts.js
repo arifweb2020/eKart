@@ -16,7 +16,7 @@ function AllProducts(props) {
         if (searchTerm.value === "") {
             return item;
         }
-        if (item.category.toLowerCase().includes(searchTerm.toLowerCase())) {
+        if (item.title.toLowerCase().includes(searchTerm.toLowerCase())) {
             return item;
         } else {
             return console.log("not found");

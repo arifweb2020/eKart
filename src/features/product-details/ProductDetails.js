@@ -18,7 +18,7 @@ function ProductDetails(props) {
         return val?.category === data?.category
     })
 
-    console.log("categoryData " + JSON.stringify(categoryData))
+   // console.log("categoryData " + JSON.stringify(categoryData))
 
     const dispatch = useDispatch()
 
@@ -28,7 +28,7 @@ function ProductDetails(props) {
 
     return (
         <div className='container mt-5 mb-5'>
-            <button onClick={()=>navigate(-1)} className="btn btn-sm btn-primary">Go Back</button>
+            <button onClick={()=>navigate(-1)} className="btn btn-sm btn-primary mb-3">Go Back</button>
             <h2>Product Details</h2>
             {!data ? <SkeletonSingleProduct />
                 : <SingleProduct singleData={data} />
