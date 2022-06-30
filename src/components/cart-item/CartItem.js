@@ -17,7 +17,7 @@ function CartItem({ item }) {
         dispatch(cartActions.deleteItem(id));
         
         toast.error("your item removed successfully", {
-            position: "bottom-right",
+            position: "top-right",
             autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -58,12 +58,13 @@ function CartItem({ item }) {
                 </div>
             </ListGroupItem>
             <ToastContainer
-                position="bottom-right"
+                position="top-right"
                 autoClose={3000}
                 hideProgressBar={false}
                 newestOnTop={true}
                 closeOnClick={true}
                 rtl={false}
+                style={{zIndex:99999}}
             />
         </>
     );
