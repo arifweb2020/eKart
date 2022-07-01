@@ -43,3 +43,15 @@
     border-bottom: 1px solid #fde4e4;
   }
   
+  .addItem{
+    height: 30px;
+    /* height: 0px; */
+    padding: 0px 8px 0px 8px;
+    background: #3f51b5d1;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+    color: #fff;
+    margin-bottom: 20px;
+  }

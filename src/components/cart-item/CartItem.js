@@ -15,7 +15,7 @@ function CartItem({ item }) {
 
     const deleteItem = () => {
         dispatch(cartActions.deleteItem(id));
-        
+
         toast.error("your item removed successfully", {
             position: "top-right",
             autoClose: 2000,
@@ -25,6 +25,38 @@ function CartItem({ item }) {
             pauseOnHover: false,
         })
     };
+
+    const incrementItem = () => {
+        dispatch(
+            cartActions.addItem({
+                id,
+                title,
+                price,
+                image,
+            })
+        );
+        toast.success("your item added successfully", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            progress: undefined,
+            pauseOnHover: false,
+        })
+    };
+
+    const decreaseItem = () => {
+        dispatch(cartActions.removeItem(id));
+        toast.error("your item removed successfully", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            progress: undefined,
+            pauseOnHover: false,
+        })
+    };
+
 
 
     return (
@@ -37,22 +69,16 @@ function CartItem({ item }) {
                         <div>
                             <h6 className="cart__product-title">{title.slice(0, 30)}</h6>
                             <p className=" d-flex align-items-center gap-5 cart__product-price">
-                                {quantity}x <span>${totalPrice}</span>
+                                {quantity}x <span>${totalPrice.toFixed(2)}</span>
                             </p>
-                            {/* <div className=" d-flex align-items-center justify-content-between increase__decrease-btn">
-              <span className="increase__btn" onClick={incrementItem}>
-                <i class="ri-add-line"></i>
-              </span>
-              <span className="quantity">{quantity}</span>
-              <span className="decrease__btn" onClick={decreaseItem}>
-                <i class="ri-subtract-line"></i>
-              </span>
-            </div> */}
+
+                            <div className='addItem'>
+                                <span onClick={incrementItem} style={{ cursor: "pointer" }}>+</span>
+                                <span onClick={incrementItem}>{quantity}</span>
+                                <span onClick={decreaseItem} style={{ cursor: "pointer" }}>-</span>
+                            </div>
                         </div>
 
-                        {/* <span className="delete__btn" onClick={deleteItem}>
-            <i class="ri-close-line"></i>
-          </span> */}
                         <BsFillXCircleFill className="delete__btn" onClick={deleteItem} />
                     </div>
                 </div>
@@ -64,7 +90,7 @@ function CartItem({ item }) {
                 newestOnTop={true}
                 closeOnClick={true}
                 rtl={false}
-                style={{zIndex:99999}}
+                style={{ zIndex: 99999 }}
             />
         </>
     );

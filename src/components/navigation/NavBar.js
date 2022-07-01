@@ -33,6 +33,9 @@ function NavBar(props) {
                             <NavLink activeClassName="active" to="/all-products">Products</NavLink>
                         </li>
                         <li className="nav-item">
+                            <NavLink activeClassName="active" to="/cart">Cart</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <SlideModal/> <span style={{position:"relative",top:"-8px",color:"#fff"}}> {itemCount || ""}</span>
                         </li>
                     </ul>

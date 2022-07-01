@@ -38,7 +38,7 @@ function AllProducts(props) {
 
     return (
         <>
-            <TopHeader />
+            <TopHeader heading="Product List"/>
             <div className='container mt-4'>
                 <h2>All Products List</h2>
                 <div className='row'>

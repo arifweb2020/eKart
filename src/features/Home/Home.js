@@ -72,7 +72,7 @@ function Home(props) {
 
     return (
         <>
-            <TopHeader />
+            <TopHeader heading="Welcome to E-KART" subheading="We have latest brands"/>
 
 
             <div className='container mt-5'>
