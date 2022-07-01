@@ -88,7 +88,7 @@ function Home(props) {
             <div className='container mt-5 mb-5'>
                 <div className='row'>
                     <div className='col-md-12'>
-                        <div className="all_category d-flex align-items-center justify-content-center gap-4">
+                        <div className="all_category d-flex align-items-center justify-content-center gap-4 mb-view">
                             {/* <button
                                 className={`all__btn  ${category === "ALL" ? "btn btn-sm btn-primary" : "btn btn-sm btn-secondary"
                                     } `}
