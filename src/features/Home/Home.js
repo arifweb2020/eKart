@@ -1,9 +1,10 @@
 import React from 'react';
 import ProductCard from '../../components/product-card/ProductCard';
-import TopHeader from './../../components/top-header/TopHeader';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { productsAsync } from './ProductSlice';
 import SkeletonProductCard from './../../components/product-card/SkeletonProductCard';
+import './style.scss';
+import Shoping from './../../assets/images/shop.png'
 
 
 function Home(props) {
@@ -72,10 +73,19 @@ function Home(props) {
 
     return (
         <>
-            <TopHeader heading="Welcome to E-KART" subheading="We have latest brands"/>
+            <div className="bgImage">
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-md-6 mt-2 mb-5'>
+                            <img src={Shoping} alt="img" className='img-fluid' />
+                            <h1 style={{fontSize:"50px",textAlign:"center",color:"#24226b",fontFamily:"fantasy",letterSpacing:"4px"}}>Welcome to <br/>Arif E-kart</h1>
+                        </div>
+                    </div>
+                    </div>
+            </div>
 
 
-            <div className='container mt-5'>
+            <div className='container mt-5 mb-5'>
                 <div className='row'>
                     <div className='col-md-12'>
                         <div className="all_category d-flex align-items-center justify-content-center gap-4">
@@ -133,7 +143,7 @@ function Home(props) {
                             <>
                                 {
                                     [...Array(12)].map((_, i) => {
-                                        return <div className='col-md-4 mt-4' key={i}>
+                                        return <div className='col-md-3 mt-4' key={i}>
                                             <SkeletonProductCard />
                                         </div>
                                     })
@@ -143,7 +153,7 @@ function Home(props) {
                         )
                             : (
                                 filterData?.map((ele) => {
-                                    return <div className='col-md-4 mt-4 mb-4'>
+                                    return <div className='col-md-3 mt-4 mb-4'>
                                         <ProductCard data={ele} key={ele?.id} />
                                     </div>
                                 })

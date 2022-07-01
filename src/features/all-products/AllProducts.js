@@ -23,7 +23,7 @@ function AllProducts(props) {
         }
     });
 
-    const productPerPage = 9;
+    const productPerPage = 12;
     const visitedPage = pageNumber * productPerPage;
     const displayPage = searchedProduct.slice(
         visitedPage,
@@ -40,7 +40,7 @@ function AllProducts(props) {
         <>
             <TopHeader heading="Product List"/>
             <div className='container mt-4'>
-                <h2>All Products List</h2>
+              
                 <div className='row'>
                     <div className='col-md-4 mt-3 mb-3'>
                         <input type="text"
@@ -58,7 +58,7 @@ function AllProducts(props) {
                             <>
                                 {
                                     [...Array(12)].map((_, i) => {
-                                        return <div className='col-md-4 mt-4' key={i}>
+                                        return <div className='col-md-3 mt-4' key={i}>
                                             <SkeletonProductCard />
                                         </div>
                                     })
@@ -69,7 +69,7 @@ function AllProducts(props) {
                             : (
 
                                 displayPage?.map((ele) => {
-                                    return <div className='col-md-4 mt-4 mb-4'>
+                                    return <div className='col-md-3 mt-4 mb-4'>
                                         <ProductCard data={ele} key={ele?.id} />
                                     </div>
                                 })

@@ -28,7 +28,7 @@ function ProductDetails(props) {
 
     return (
         <div className='container mt-5 mb-5'>
-            <button onClick={()=>navigate(-1)} className="btn btn-sm btn-primary mb-3">Go Back</button>
+            <button onClick={()=>navigate(-1)} style={{background:"darkorange",border:"none"}} className="btn btn-sm btn-primary mb-3">Go Back</button>
             <h2>Product Details</h2>
             {!data ? <SkeletonSingleProduct />
                 : <SingleProduct singleData={data} />
@@ -41,7 +41,7 @@ function ProductDetails(props) {
                             <>
                                 {
                                     [...Array(6)].map((_, i) => {
-                                        return <div className='col-md-4 mt-4' key={i}>
+                                        return <div className='col-md-3 mt-4' key={i}>
                                             <SkeletonProductCard />
                                         </div>
                                     })
@@ -51,7 +51,7 @@ function ProductDetails(props) {
                         )
                             : (
                                 categoryData?.map((ele) => {
-                                    return <div className='col-md-4 mt-4 mb-4'>
+                                    return <div className='col-md-3 mt-4 mb-4'>
                                         <ProductCard data={ele} key={ele.id} />
                                     </div>
                                 })

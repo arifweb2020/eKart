@@ -34,13 +34,13 @@ function ProductCard({ data }) {
 
     return (
 
-        <div className="card h-100 text-center p-4">
-            <img className="card-img-top" src={data.image} alt="Card" height="250" />
+        <div className="card h-100 text-center p-4" >
+            <img className="card-img-top" src={data.image} alt="Card" height="200" onClick={() => navigate(`/single-products/${data.id}`)} style={{cursor:"pointer"}}/>
             <div className="card-body">
-                <h5 className="card-title">{data.title}</h5>
+                <h6 className="card-title" onClick={() => navigate(`/single-products/${data.id}`)} style={{cursor:"pointer"}}>{data.title.toUpperCase().slice(0,15)}</h6>
                 <p className="card-text">{"$"}{data.price}</p>
-                <button className='btn btn-sm btn-primary' onClick={() => addtoCart(data)}>Add to Cart</button>
-                <button className="btn btn-link" onClick={() => navigate(`/single-products/${data.id}`)}>view</button>
+                <button className='btn btn-sm btn-primary' style={{background:"#3f51b5",border:"none"}} onClick={() => addtoCart(data)}>Add to Cart</button>
+                {/* <button className="btn btn-link" onClick={() => navigate(`/single-products/${data.id}`)}>view</button> */}
 
             </div>
             <ToastContainer
