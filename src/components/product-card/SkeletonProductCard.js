@@ -8,8 +8,8 @@ function SkeletonProductCard(props) {
                         <SkeletonLoader height="250px" />
                         <div className="card-body">
                             <h4 className="card-title"><SkeletonLoader /></h4>
-                            <p className="card-text"><SkeletonLoader /></p>
-                            <SkeletonLoader />
+                            <p className="card-text"><SkeletonLoader width="100px" height="20px"/></p>
+                            <SkeletonLoader width="120px" height="30px"/>
                            
 
                         </div>

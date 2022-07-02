@@ -35,7 +35,7 @@ function ProductCard({ data }) {
 
     return (
 
-        <div className="card h-100 text-center p-4" >
+        <div className="card h-100 text-center p-4 shadow-lg" >
             <div className='product__img'><img className="card-img-top" src={data.image} alt="Card" height="200" onClick={() => navigate(`/single-products/${data.id}`)} style={{cursor:"pointer"}}/></div>
             
             <div className="card-body">

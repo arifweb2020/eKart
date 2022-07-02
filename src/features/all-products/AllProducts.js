@@ -13,11 +13,11 @@ function AllProducts(props) {
 
     const [pageNumber, setPageNumber] = React.useState(0);
 
-    const searchedProduct = allProducts.filter((item) => {
+    const searchedProduct = allProducts?.filter((item) => {
         if (searchTerm.value === "") {
             return item;
         }
-        if (item.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+        if (item?.title?.toLowerCase().includes(searchTerm.toLowerCase())) {
             return item;
         } else {
             return console.log("not found");
@@ -26,12 +26,12 @@ function AllProducts(props) {
 
     const productPerPage = 12;
     const visitedPage = pageNumber * productPerPage;
-    const displayPage = searchedProduct.slice(
+    const displayPage = searchedProduct?.slice(
         visitedPage,
         visitedPage + productPerPage
     );
 
-    const pageCount = Math.ceil(searchedProduct.length / productPerPage);
+    const pageCount = Math.ceil(searchedProduct?.length / productPerPage);
 
     const changePage = ({ selected }) => {
         setPageNumber(selected);
@@ -56,7 +56,7 @@ function AllProducts(props) {
 
                 <div className='row'>
                     {
-                        allProducts.length === 0 ? (
+                        allProducts?.length === 0 ? (
                             <>
                                 {
                                     [...Array(12)].map((_, i) => {
@@ -78,13 +78,13 @@ function AllProducts(props) {
                             )
                     }
                     {
-                        displayPage.length === 0 ? <div className='col-md-12'>
+                        displayPage?.length === 0 ? <div className='col-md-12'>
                             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "60px", marginTop: "30px",marginBottom:"40px", background: "#80808040", borderRadius: "10px" }}> <h5>NO DATA FOUND</h5></div>
                         </div> : null
                     }
 
                     {
-                        displayPage.length === 0 ? null : <div>
+                        displayPage?.length === 0 ? null : <div>
                             <ReactPaginate
                                 pageCount={pageCount}
                                 onPageChange={changePage}

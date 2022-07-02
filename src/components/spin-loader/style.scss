@@ -14,3 +14,14 @@
     }  
 }
 
+@media (max-width:667px){
+    .spinLoader{
+        
+        & .circle{
+        top:50%;
+        left:45%;
+        position:absolute;
+        }  
+    }
+}
+

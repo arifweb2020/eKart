@@ -25,11 +25,11 @@ function NavBar(props) {
     setSidebarOpen(false)
    }
     return (
-        <div className="navBarContainer">
+        <div className="navBarContainer shadow-lg">
           
             <div className='innerNavbar'>
                 <div className='logo'>
-                    <Link to="/">ARIF E-KART</Link>
+                    <h1><Link to="/">ARIF E-KART</Link></h1>
                 </div>
                 <div className='navList'>
                     <ul>
