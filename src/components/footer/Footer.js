@@ -12,8 +12,7 @@ function Footer(props) {
               
               <h5>ARIF E-KART</h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt pariatur accusamus
+              Arif E-Kart is an ecommerce company and has headquarters in Bangalore, Karnataka, India.
               </p>
             </div>
           </Col>
