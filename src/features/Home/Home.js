@@ -151,7 +151,7 @@ function Home(props) {
                         )
                             : (
                                 filterData?.map((ele) => {
-                                    return <div className='col-md-3 mt-4 mb-4'>
+                                    return <div className='col-md-3 mt-5 mb-4'>
                                         <ProductCard data={ele} key={ele?.id} />
                                     </div>
                                 })

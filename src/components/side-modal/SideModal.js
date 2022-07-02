@@ -30,7 +30,7 @@ function SlideModal() {
                 <ListGroup className="cart">
                     <div className="cart__close">
                         <span onClick={handleClose}>
-                            <BsFillXCircleFill style={{ fontSize: "26px", cursor: "pointer" }} />
+                            <BsFillXCircleFill className="cartClose" style={{ fontSize: "26px", cursor: "pointer" }} />
                         </span>
 
                     </div>
