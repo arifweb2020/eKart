@@ -5,6 +5,7 @@ import { productsAsync } from './ProductSlice';
 import SkeletonProductCard from './../../components/product-card/SkeletonProductCard';
 import './style.scss';
 import Shoping from './../../assets/images/shop.png'
+import Footer from '../../components/footer/Footer';
 
 
 function Home(props) {
@@ -141,7 +142,7 @@ function Home(props) {
                             <>
                                 {
                                     [...Array(12)].map((_, i) => {
-                                        return <div className='col-md-3 mt-4' key={i}>
+                                        return <div className='col-lg-3 col-md-4  mt-4' key={i}>
                                             <SkeletonProductCard />
                                         </div>
                                     })
@@ -151,7 +152,7 @@ function Home(props) {
                         )
                             : (
                                 filterData?.map((ele) => {
-                                    return <div className='col-md-3 mt-5 mb-4'>
+                                    return <div className='col-lg-3 col-md-4  mt-5 mb-4'>
                                         <ProductCard data={ele} key={ele?.id} />
                                     </div>
                                 })
@@ -160,6 +161,7 @@ function Home(props) {
 
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

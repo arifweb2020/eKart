@@ -9,6 +9,7 @@ import './style.scss';
 import { useSelector } from 'react-redux';
 import SlideModal from '../side-modal/SideModal';
 import { BsGrid3X3GapFill, BsPersonLinesFill } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -16,13 +17,14 @@ function NavBar(props) {
 
     // const itemCount = useSelector((state)=>state.cart.cartItems.length)
     const itemCount = useSelector((state) => state.cart.totalQuantity);
-    console.log(itemCount)
+    //console.log(itemCount)
+    const navigate = useNavigate()
 
     const [sidebarOpen , setSidebarOpen] = React.useState(false)
 
     return (
         <div className="navBarContainer">
-            <div style={{boxShadow:"0px 15px 10px -15px #111",borderBottom:"2px solid #ff5722"}}>
+          
             <div className='innerNavbar'>
                 <div className='logo'>
                     <Link to="/">ARIF E-KART</Link>
@@ -48,7 +50,7 @@ function NavBar(props) {
                         <SlideModal /><span style={{ position: "relative", top: "-8px", color: "black",fontWeight:"500" }}> {itemCount || ""}</span>
                     </div>
                     <div>
-                        <BsPersonLinesFill style={{ color: "#ff5722", fontSize: "20px", cursor: "pointer" }}/>
+                        <BsPersonLinesFill style={{ color: "#ff5722", fontSize: "20px", cursor: "pointer" }} onClick={()=> navigate("/user")}/>
                     </div>
                     <div>
                         <BsGrid3X3GapFill className='menuBtn' style={{ fontSize: "20px", cursor: "pointer" }} onClick={()=>setSidebarOpen(!sidebarOpen)}/>
@@ -77,7 +79,7 @@ function NavBar(props) {
                 </ul>
             </div> : null }
         </div>
-        </div >
+    
     );
 }
 

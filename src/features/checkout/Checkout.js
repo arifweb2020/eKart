@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import Footer from "../../components/footer/Footer";
 import TopHeader from "../../components/top-header/TopHeader";
 import './style.scss'
 
@@ -34,10 +35,10 @@ function Checkout(props) {
     return (
         <>
             <TopHeader heading="Checkout" />
-            <div className='container mt-5 mb-5'>
+            <div className='container topCC mt-5 mb-5'>
                 <div className="row mt-5">
                     <div className='col-md-7'>
-                        <h6 className="mb-4">Shipping Address</h6>
+                        <h3 className="mb-4">Shipping Address</h3>
                         <form className="checkout__form" onSubmit={submitHandler}>
                             <div className="form__group">
                                 <input
@@ -88,7 +89,7 @@ function Checkout(props) {
                                     onChange={(e) => setPostalCode(e.target.value)}
                                 />
                             </div>
-                            <button type="submit" className="btn btn-md btn-success">
+                            <button type="submit" style={{background:"black",color:"#fff",border:"none",padding:"10px",width:"200px"}}>
                                 Payment
                             </button>
                         </form>
@@ -112,6 +113,7 @@ function Checkout(props) {
                 </div>
 
             </div>
+            <Footer/>
         </>
     );
 }

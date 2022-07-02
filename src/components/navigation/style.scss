@@ -82,6 +82,13 @@ ul li .active{
 }
 
 @media screen and (max-width:960px){
+  .navBarContainer {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    z-index: 9999;
+    border-bottom: 2px solid darkorange;
+}
   .innerNavbar{
     max-width:95%;
     margin-top: 15px;
@@ -101,7 +108,7 @@ ul li .active{
   .mob-nav{
 		display:flex;
 		justify-content: center;
-		width: 13rem;
+		width: 16rem;
   background: #ff5722;
   height: 100vh;
   position: absolute;
@@ -112,7 +119,9 @@ ul li .active{
   z-index: 9999;
 	}
 	
-	
+	.cartIcons > div {
+    margin-right: 20px;
+  }
 	.mob-nav .mob-items {
   
   display: flex;

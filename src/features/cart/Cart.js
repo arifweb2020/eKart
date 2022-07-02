@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { cartActions } from '../../app/extraReducer/cartSlice';
 import TopHeader from '../../components/top-header/TopHeader';
+import Footer from './../../components/footer/Footer';
 
 function Cart(props) {
     const cartItems = useSelector((state) => state.cart.cartItems);
@@ -28,7 +29,7 @@ function Cart(props) {
 
     return (<>
         <TopHeader heading="Your Cart"/>
-        <div className="container mt-5 mb-5">
+        <div className="container topCC mt-5 mb-5">
            
             <div className='col-row'>
                 <div className='col-md-12'>
@@ -81,10 +82,10 @@ function Cart(props) {
                     </h6>
                     <p>Taxes and shipping will calculate at checkout</p>
                     <div className="cart__page-btn">
-                        <button className="btn btn-md btn-info" onClick={() => navigate("/all-products")}>
+                        <button className="btn btn-sm " style={{background:"darkorange",color:"#fff"}} onClick={() => navigate("/all-products")}>
                             Continue Shopping
                         </button>
-                        <button className="btn btn-md btn-secondary" onClick={() => navigate("/checkout")} style={{ marginLeft: "15px" }}>
+                        <button className="btn btn-sm"  onClick={() => navigate("/checkout")} style={{ marginLeft: "10px",background:"black",color:"#fff" }}>
                             Proceed to checkout
                         </button>
                     </div>
@@ -100,6 +101,7 @@ function Cart(props) {
                 style={{ zIndex: 99999 }}
             />
         </div>
+        <Footer/>
         </>
     );
 }

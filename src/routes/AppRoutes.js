@@ -7,6 +7,8 @@ const SingleProducts = React.lazy(() => import('./../features/product-details/Pr
 const AllProducts = React.lazy(() => import('./../features/all-products/AllProducts'));
 const Cart = React.lazy(() => import('./../features/cart/Cart'));
 const Checkout = React.lazy(() => import('./../features/checkout/Checkout'));
+const Contact = React.lazy(() => import('./../features/contact/Contact'));
+const User = React.lazy(() => import('./../features/user/User'));
 
 function AppRoutes(props) {
     return (
@@ -18,7 +20,9 @@ function AppRoutes(props) {
                     <Route  path="/single-products/:id" element={<SingleProducts />} />
                     <Route  path="/all-products" element={<AllProducts />} />
                     <Route  path="/cart" element={<Cart />} />
+                    <Route  path="/contact" element={<Contact />} />
                     <Route  path="/checkout" element={<Checkout />} />
+                    <Route  path="/user" element={<User />} />
                 </Routes>
             </React.Suspense>
 

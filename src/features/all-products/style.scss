@@ -26,3 +26,10 @@
   .paginationBttns a:hover {
     background: #df2020;
   }
+
+
+  @media (max-width:960px){
+    .topCC{
+      padding-top: 69px;
+    }
+  }

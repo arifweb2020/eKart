@@ -17,8 +17,8 @@
 }
 
 .greyBtn{
-    background-color: rgba(181, 177, 177, 0.457);
-    color: black;
+    background-color: darkorange;
+    color: #fff;
     border: none; 
     min-height: 40px;
 }
@@ -27,7 +27,7 @@
     width: 100%;
 }
 
-@media (max-width:700px){
+@media (max-width:960px){
     .mb-view{
         overflow-x: auto;
         flex-wrap: nowrap;
@@ -37,6 +37,9 @@
    }
     .greyBtn{
         font-size: 11px;
+    }
+    .bgImage{
+        padding-top: 96px;
     }
     
 }
