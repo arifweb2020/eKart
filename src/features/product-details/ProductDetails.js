@@ -7,6 +7,7 @@ import SkeletonSingleProduct from './../../components/single-product/SkeletonSin
 import ProductCard from '../../components/product-card/ProductCard';
 import SkeletonProductCard from '../../components/product-card/SkeletonProductCard';
 import { useNavigate } from 'react-router-dom';  
+import TopHeader from '../../components/top-header/TopHeader';
 
 function ProductDetails(props) {
     const { id } = useParams()
@@ -27,9 +28,11 @@ function ProductDetails(props) {
     }, [dispatch, id])
 
     return (
+        <>
+        <TopHeader heading="Product Details"/>
         <div className='container mt-5 mb-5'>
-            <button onClick={()=>navigate(-1)} style={{background:"darkorange",border:"none"}} className="btn btn-sm btn-primary mb-3">Go Back</button>
-            <h2>Product Details</h2>
+            <button onClick={()=>navigate(-1)} style={{background:"black",border:"none"}} className="btn btn-sm btn-primary mb-3">Go Back</button>
+            
             {!data ? <SkeletonSingleProduct />
                 : <SingleProduct singleData={data} />
             }
@@ -60,6 +63,7 @@ function ProductDetails(props) {
             </div>
 
         </div>
+        </>
     );
 }
 

@@ -58,7 +58,7 @@ ul li a:hover{
 
 
 ul li .active{
-	color: #3f51b5;	
+	color: #ff5722;	
 }
 
 .cartIcons {
@@ -84,6 +84,8 @@ ul li .active{
 @media screen and (max-width:960px){
   .innerNavbar{
     max-width:95%;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
   .logo a{
     font-size: 20px;
@@ -93,13 +95,14 @@ ul li .active{
   }
   .menuBtn{
     display: block;
+    color: black;
   }
 
   .mob-nav{
 		display:flex;
 		justify-content: center;
 		width: 13rem;
-  background: #3f51b5;
+  background: #ff5722;
   height: 100vh;
   position: absolute;
   //top: 12vh;
@@ -137,5 +140,8 @@ ul li .active{
 
 .mob-items li a:hover{
 	background: #fff;	
+}
+ul li .active{
+	color:black;	
 }
 }

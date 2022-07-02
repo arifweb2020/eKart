@@ -37,7 +37,8 @@ function Cart(props) {
                             <BsFillCartXFill style={{ fontSize: "40px", color: "#ff0000b8" }} /><br />
                             Your cart is empty</h5>
                     ) : (
-                        <table className="table table-bordered">
+                        <div class="container table-responsive py-5">
+                        <table className="table table-bordered ">
                             <thead style={{textAlign:"center"}}>
                                 <tr>
                                     <th>Image</th>
@@ -66,6 +67,7 @@ function Cart(props) {
                                     )}
                             </tbody>
                         </table>
+                        </div>
                     )}
                 </div>
             </div>

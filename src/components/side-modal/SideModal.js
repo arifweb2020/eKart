@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { BsFillCartFill, BsFillXCircleFill } from "react-icons/bs";
+import {  BsFillXCircleFill } from "react-icons/bs";
 import ListGroup from 'react-bootstrap/ListGroup';
 import './style.scss';
 import { useSelector } from 'react-redux';
 import CartItem from '../cart-item/CartItem';
 import { useNavigate } from 'react-router-dom';
-import { BsFillCartXFill } from "react-icons/bs";
+import { BsCart4 } from "react-icons/bs";
 
 
 function SlideModal() {
@@ -25,7 +25,7 @@ function SlideModal() {
     return (
         <>
 
-            <BsFillCartFill style={{ color: "black", fontSize: "23px", cursor: "pointer" }} onClick={handleShow} />
+            <BsCart4 style={{ color: "#ff5722", fontSize: "23px", cursor: "pointer" }} onClick={handleShow} />
             {show ? <div className="cart__container">
                 <ListGroup className="cart">
                     <div className="cart__close">
@@ -38,7 +38,7 @@ function SlideModal() {
                     <div className="cart__item-list">
                         {cartProducts.length === 0 ? (
                             <h4 className="text-center mt-5">
-                                <BsFillCartXFill style={{fontSize:"40px",color:"#ff0000b8"}}/><br/>
+                                <BsCart4 style={{fontSize:"40px",color:"#ff0000b8"}}/><br/>
                                 Your cart is empty.</h4>
                         ) : (
                             cartProducts.map((item, index) => (

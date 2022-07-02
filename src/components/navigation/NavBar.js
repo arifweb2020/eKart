@@ -8,7 +8,7 @@ import { NavLink, Link } from 'react-router-dom';
 import './style.scss';
 import { useSelector } from 'react-redux';
 import SlideModal from '../side-modal/SideModal';
-import { BsFillXDiamondFill, BsPersonLinesFill } from "react-icons/bs";
+import { BsGrid3X3GapFill, BsPersonLinesFill } from "react-icons/bs";
 
 
 
@@ -22,6 +22,7 @@ function NavBar(props) {
 
     return (
         <div className="navBarContainer">
+            <div style={{boxShadow:"0px 15px 10px -15px #111",borderBottom:"2px solid #ff5722"}}>
             <div className='innerNavbar'>
                 <div className='logo'>
                     <Link to="/">ARIF E-KART</Link>
@@ -44,13 +45,13 @@ function NavBar(props) {
                 </div>
                 <div className='cartIcons'>
                     <div>
-                        <SlideModal /><span style={{ position: "relative", top: "-8px", color: "green" }}> {itemCount || ""}</span>
+                        <SlideModal /><span style={{ position: "relative", top: "-8px", color: "black",fontWeight:"500" }}> {itemCount || ""}</span>
                     </div>
                     <div>
-                        <BsPersonLinesFill />
+                        <BsPersonLinesFill style={{ color: "#ff5722", fontSize: "20px", cursor: "pointer" }}/>
                     </div>
                     <div>
-                        <BsFillXDiamondFill className='menuBtn' onClick={()=>setSidebarOpen(!sidebarOpen)}/>
+                        <BsGrid3X3GapFill className='menuBtn' style={{ fontSize: "20px", cursor: "pointer" }} onClick={()=>setSidebarOpen(!sidebarOpen)}/>
                     </div>
                 </div>
             </div>
@@ -75,7 +76,7 @@ function NavBar(props) {
                     </ul>
                 </ul>
             </div> : null }
-
+        </div>
         </div >
     );
 }
