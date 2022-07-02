@@ -48,8 +48,8 @@ function NavBar(props) {
                     </ul>
                 </div>
                 <div className='cartIcons'>
-                    <div style={{position:"relative",top:"0px"}}>
-                        <SlideModal cmd={arif}/><span style={{ position: "relative", top: "-23px",left:"24px", color: "black",fontWeight:"500" }}> {itemCount || ""}</span>
+                    <div style={{position:"relative",top:"10px",left:"-11px"}}>
+                        <SlideModal cmd={arif}/><span style={{ position: "relative", top: "-31px",left:"24px", color: "black",fontWeight:"500" }}> {itemCount || ""}</span>
                     </div>
                     <div>
                         <BsPersonLinesFill style={{ color: "#ff5722", fontSize: "20px", cursor: "pointer" }} onClick={()=> navigate("/user")}/>
