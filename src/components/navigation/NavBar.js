@@ -48,7 +48,7 @@ function NavBar(props) {
                     </ul>
                 </div>
                 <div className='cartIcons'>
-                    <div style={{position:"relative",top:"10px",left:"-11px"}}>
+                    <div style={itemCount ? {position:"relative",left:"-11px",top:"9px"} : {position:"relative",left:"-11px"}}>
                         <SlideModal cmd={arif}/><span style={{ position: "relative", top: "-31px",left:"24px", color: "black",fontWeight:"500" }}> {itemCount || ""}</span>
                     </div>
                     <div>

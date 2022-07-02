@@ -37,7 +37,7 @@ function Checkout(props) {
             <TopHeader heading="Checkout" />
             <div className='container topCC mt-5 mb-5'>
                 <div className="row mt-5">
-                    <div className='col-md-7'>
+                    <div className='col-md-7 shipp'>
                         <h3 className="mb-4">Shipping Address</h3>
                         <form className="checkout__form" onSubmit={submitHandler}>
                             <div className="form__group">

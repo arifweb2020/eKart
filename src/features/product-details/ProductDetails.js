@@ -31,8 +31,8 @@ function ProductDetails(props) {
     return (
         <>
         <TopHeader heading="Product Details"/>
-        <div className='container topCC mt-5 mb-5'>
-            <button onClick={()=>navigate(-1)} style={{background:"black",border:"none"}} className="btn btn-sm btn-primary mb-3">Go Back</button>
+        <div className='container topCC mt-5 mb-5 '>
+            <button onClick={()=>navigate(-1)} style={{background:"black",border:"none",color:"#fff"}} className="btn btn-sm  mb-3 ">Go Back</button>
             
             {!data ? <SkeletonSingleProduct />
                 : <SingleProduct singleData={data} />

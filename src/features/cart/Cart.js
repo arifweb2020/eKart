@@ -29,7 +29,7 @@ function Cart(props) {
 
     return (<>
         <TopHeader heading="Your Cart"/>
-        <div className="container topCC mt-5 mb-5">
+        <div className="container mt-5 mb-5">
            
             <div className='col-row'>
                 <div className='col-md-12'>
@@ -75,7 +75,7 @@ function Cart(props) {
 
 
             <div className='col-row'>
-                <div className='col-md-12'>
+                <div className='col-md-12 mt-3'>
                     <h6>
                         Subtotal: $
                         <span className="cart__subtotal">{totalAmount.toFixed(2)}</span>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes,Navigate } from "react-router-dom";
 import SpinLoader from './../components/spin-loader/SpinLoader';
 
 const Home = React.lazy(() => import('./../features/Home/Home'));
@@ -9,6 +9,7 @@ const Cart = React.lazy(() => import('./../features/cart/Cart'));
 const Checkout = React.lazy(() => import('./../features/checkout/Checkout'));
 const Contact = React.lazy(() => import('./../features/contact/Contact'));
 const User = React.lazy(() => import('./../features/user/User'));
+const Error404 = React.lazy(() => import('./../features/error/ErrorPage.js'));
 
 function AppRoutes(props) {
     return (
@@ -23,6 +24,8 @@ function AppRoutes(props) {
                     <Route  path="/contact" element={<Contact />} />
                     <Route  path="/checkout" element={<Checkout />} />
                     <Route  path="/user" element={<User />} />
+                    <Route  path="*" element={<Error404/>} />
+                    {/* <Route render={() => <Navigate to="/error-404" />} /> */}
                 </Routes>
             </React.Suspense>
 

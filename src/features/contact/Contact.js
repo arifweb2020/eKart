@@ -24,8 +24,8 @@ function Contact(props) {
     };
     return (
         <>
-            <TopHeader heading="Checkout" />
-            <div className='container topCC mt-5 mb-5'>
+            <TopHeader heading="Contact Us" />
+            <div className='container topCon mt-5 mb-5'>
                 <div className="row mt-5">
                     <div className='col-md-7'>
                         <h3 className="mb-4">Send Message</h3>
