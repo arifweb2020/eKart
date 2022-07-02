@@ -50,7 +50,7 @@ function Footer(props) {
 
           <Col lg="3" md="4" sm="6">
             <h5 className="footer__title">Newsletter</h5>
-            <p>Subscribe our newsletter</p>
+            <p style={{color:"#24c924"}}>Subscribe our newsletter</p>
             <div className="newsletter">
               <input type="email" placeholder="Enter your email" />
               <button style={{background:"darkorange",color:"#fff"}}>
