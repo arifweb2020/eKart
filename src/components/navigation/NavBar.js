@@ -21,7 +21,9 @@ function NavBar(props) {
     const navigate = useNavigate()
 
     const [sidebarOpen , setSidebarOpen] = React.useState(false)
-
+   const arif = ()=>{
+    setSidebarOpen(false)
+   }
     return (
         <div className="navBarContainer">
           
@@ -46,8 +48,8 @@ function NavBar(props) {
                     </ul>
                 </div>
                 <div className='cartIcons'>
-                    <div>
-                        <SlideModal /><span style={{ position: "relative", top: "-8px", color: "black",fontWeight:"500" }}> {itemCount || ""}</span>
+                    <div style={{position:"relative",top:"0px"}}>
+                        <SlideModal cmd={arif}/><span style={{ position: "relative", top: "-23px",left:"24px", color: "black",fontWeight:"500" }}> {itemCount || ""}</span>
                     </div>
                     <div>
                         <BsPersonLinesFill style={{ color: "#ff5722", fontSize: "20px", cursor: "pointer" }} onClick={()=> navigate("/user")}/>

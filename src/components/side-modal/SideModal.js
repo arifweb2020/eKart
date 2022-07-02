@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { BsCart4 } from "react-icons/bs";
 
 
-function SlideModal() {
+function SlideModal({cmd}) {
     const cartProducts = useSelector((state) => state.cart.cartItems);
     let navigate = useNavigate();
     const totalAmount = useSelector((state) => state.cart.totalAmount);
@@ -23,7 +23,7 @@ function SlideModal() {
     }
 
     return (
-        <>
+        <div onClick={cmd}>
 
             <BsCart4 style={{ color: "#ff5722", fontSize: "23px", cursor: "pointer" }} onClick={handleShow} />
             {show ? <div className="cart__container">
@@ -61,7 +61,7 @@ function SlideModal() {
                 </ListGroup>
             </div> : null}
 
-        </>
+        </div>
     );
 }
 
