@@ -49,6 +49,7 @@ function AllProducts(props) {
                             placeholder='Search items'
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
+                            style={{height:"50px",border:"2px soild black"}}
                         />
                     </div>
                 </div>
@@ -78,7 +79,7 @@ function AllProducts(props) {
                     }
                     {
                         displayPage.length === 0 ? <div className='col-md-12'>
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "60px", marginTop: "30px", background: "#80808040", borderRadius: "10px" }}> <h5>NO DATA FOUND</h5></div>
+                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "60px", marginTop: "30px",marginBottom:"40px", background: "#80808040", borderRadius: "10px" }}> <h5>NO DATA FOUND</h5></div>
                         </div> : null
                     }
 
