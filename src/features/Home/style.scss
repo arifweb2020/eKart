@@ -9,9 +9,34 @@
     background-color: #464646;
 }
 
+.blackBtn{
+    background-color: black;
+    color: #fff;
+    border: none; 
+    min-height: 40px;   
+}
+
+.greyBtn{
+    background-color: rgba(181, 177, 177, 0.457);
+    color: black;
+    border: none; 
+    min-height: 40px;
+}
+
+.fullWidth{
+    width: 100%;
+}
+
 @media (max-width:700px){
     .mb-view{
-        flex-direction: column;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+   .blackBtn{
+    font-size: 11px;
+   }
+    .greyBtn{
+        font-size: 11px;
     }
     
 }

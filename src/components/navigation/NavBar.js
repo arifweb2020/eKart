@@ -13,34 +13,38 @@ import SlideModal from '../side-modal/SideModal';
 
 function NavBar(props) {
 
-   // const itemCount = useSelector((state)=>state.cart.cartItems.length)
+    // const itemCount = useSelector((state)=>state.cart.cartItems.length)
     const itemCount = useSelector((state) => state.cart.totalQuantity);
     console.log(itemCount)
 
     return (
-        <div className="navBar">
-            <nav className="navbar navbar-expand-md bg-dark navbar-dark navbarBackground">
-                <Link className="navbar-brand" to="/">ARIF E-KART</Link>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-                    <ul className="navbar-nav ">
-                        <li className="nav-item">
+        <div className="navBarContainer">
+            <div className='innerNavbar'>
+                <div className='logo'>
+                    <Link to="/">ARIF E-KART</Link>
+                </div>
+                <div className='navList'>
+                    <ul>
+                        <li>
                             <NavLink activeClassName="active" to="/">Home</NavLink>
                         </li>
-                        <li className="nav-item">
+                        <li>
                             <NavLink activeClassName="active" to="/all-products">Products</NavLink>
                         </li>
-                        <li className="nav-item">
+                        <li>
                             <NavLink activeClassName="active" to="/cart">Cart</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <SlideModal/> <span style={{position:"relative",top:"-8px",color:"#fff"}}> {itemCount || ""}</span>
+                        <li>
+                            <NavLink activeClassName="active" to="/contact">Contact</NavLink>
                         </li>
                     </ul>
                 </div>
-            </nav>
+                <div className='cartIcons'>
+                    <div>
+                        <SlideModal /><span style={{position:"relative",top:"-8px",color:"green"}}> {itemCount || ""}</span>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

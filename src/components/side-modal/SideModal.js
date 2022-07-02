@@ -25,7 +25,7 @@ function SlideModal() {
     return (
         <>
 
-            <BsFillCartFill style={{ color: "#fff", fontSize: "23px", cursor: "pointer" }} onClick={handleShow} />
+            <BsFillCartFill style={{ color: "black", fontSize: "23px", cursor: "pointer" }} onClick={handleShow} />
             {show ? <div className="cart__container">
                 <ListGroup className="cart">
                     <div className="cart__close">

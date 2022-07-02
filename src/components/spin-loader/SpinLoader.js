@@ -8,7 +8,9 @@ import './style.scss'
 function SpinLoader(props) {
     return (
         <div className='spinLoader'>
-            <div class="spinner-border text-primary"></div>
+            <div className='spinner-border text-primary circle' role='status'>
+                <span className='sr-only' ></span>
+            </div>
         </div>
     );
 }
