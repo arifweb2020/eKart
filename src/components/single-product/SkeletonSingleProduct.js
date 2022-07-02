@@ -10,8 +10,10 @@ function SkeletonSingleProduct(props) {
             <div className='col-md-8'>
                 <h4><SkeletonLoader /></h4>
                 <h5><SkeletonLoader /></h5>
-                <p><SkeletonLoader count={5}/></p>
-                <p><SkeletonLoader /></p>
+                <p><SkeletonLoader width="100px" height="20px"/></p>
+                <p><SkeletonLoader count={3}/></p>
+                <p><SkeletonLoader width="100px" height="30px"/></p>
+                <p><SkeletonLoader width="100px"  height="30px"/></p>
             </div>
 
 

@@ -4,6 +4,7 @@ import { cartActions } from './../../app/extraReducer/cartSlice';
 import { useDispatch } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './style.scss'
 
 
 function ProductCard({ data }) {
@@ -35,7 +36,8 @@ function ProductCard({ data }) {
     return (
 
         <div className="card h-100 text-center p-4" >
-            <img className="card-img-top" src={data.image} alt="Card" height="200" onClick={() => navigate(`/single-products/${data.id}`)} style={{cursor:"pointer"}}/>
+            <div className='product__img'><img className="card-img-top" src={data.image} alt="Card" height="200" onClick={() => navigate(`/single-products/${data.id}`)} style={{cursor:"pointer"}}/></div>
+            
             <div className="card-body">
                 <h6 className="card-title" onClick={() => navigate(`/single-products/${data.id}`)} style={{cursor:"pointer"}}>{data.title.toUpperCase().slice(0,15)}</h6>
                 <p className="card-text">{"$"}{data.price}</p>
