@@ -56,7 +56,7 @@ function NavBar(props) {
                     </div>
                     <div>
                         {
-                            sidebarOpen ?  <BsFillXSquareFill className='menuBtn' style={{ fontSize: "20px", cursor: "pointer" }} onClick={()=>setSidebarOpen(!sidebarOpen)}/> :  <BsGrid3X3GapFill className='menuBtn' style={{ fontSize: "20px", cursor: "pointer" }} onClick={()=>setSidebarOpen(!sidebarOpen)}/>
+                            sidebarOpen ?  <BsFillXSquareFill className='menuBtn' style={{ fontSize: "20px",color: "red", cursor: "pointer" }} onClick={()=>setSidebarOpen(!sidebarOpen)}/> :  <BsGrid3X3GapFill className='menuBtn' style={{ fontSize: "20px",color: "#ff5722", cursor: "pointer" }} onClick={()=>setSidebarOpen(!sidebarOpen)}/>
                         }
                        
                     </div>

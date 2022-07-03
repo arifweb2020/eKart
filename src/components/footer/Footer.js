@@ -53,7 +53,7 @@ function Footer(props) {
             <p style={{color:"#24c924"}}>Subscribe our newsletter</p>
             <div className="newsletter">
               <input type="email" placeholder="Enter your email" />
-              <button style={{background:"darkorange",color:"#fff"}}>
+              <button style={{background:"darkorange",color:"#fff",border:"none",borderRadius:"4px"}}>
                 send
               </button>
             </div>

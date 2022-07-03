@@ -73,9 +73,9 @@ function CartItem({ item }) {
                             </p>
 
                             <div className='addItem'>
-                                <span onClick={incrementItem} style={{ cursor: "pointer" }}>+</span>
-                                <span onClick={incrementItem}>{quantity}</span>
-                                <span onClick={decreaseItem} style={{ cursor: "pointer" }}>-</span>
+                                <span onClick={incrementItem} style={{ cursor: "pointer",fontSize:"23px",position:"relative",top:"-5px" }}>+</span>
+                                <span onClick={incrementItem} style={{position:"relative",top:"2px"}}>{quantity}</span>
+                                <span onClick={decreaseItem} style={{ cursor: "pointer",fontSize:"35px",position:"relative",top:"-15px" }}>-</span>
                             </div>
                         </div>
 
