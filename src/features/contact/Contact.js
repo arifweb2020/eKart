@@ -64,7 +64,7 @@ function Contact(props) {
                     </div>
 
                     <div className="col-md-4 offset-md-1">
-                        <div className="checkout__bill">
+                        <div className="checkout__bill shadow-lg">
                             <h6 className="d-flex align-items-center justify-content-between mb-3">
                                 Contact Person: <span>Md Arif Hussain</span>
                             </h6>

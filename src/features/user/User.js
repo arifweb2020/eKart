@@ -25,9 +25,9 @@ function User(props) {
     return (
         <>
             <TopHeader heading={login? "Login" : "Sign Up"} />
-            <div className='container topCC mt-5 mb-5'>
+            <div className='container topUser mt-5 mb-5'>
                 <div className="row mt-5">
-                    <div className='col-md-4 offset-md-4 col-12 shadow-lg p-4 arif'>
+                    <div className='col-lg-4 offset-lg-4  col-md-6 offset-md-3  col-12 shadow-lg p-4'>
                         {
                         login ? 
                             <>

@@ -8,7 +8,7 @@ import { NavLink, Link } from 'react-router-dom';
 import './style.scss';
 import { useSelector } from 'react-redux';
 import SlideModal from '../side-modal/SideModal';
-import { BsGrid3X3GapFill, BsPersonLinesFill } from "react-icons/bs";
+import { BsGrid3X3GapFill, BsPersonCircle , BsFillXSquareFill } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -29,7 +29,7 @@ function NavBar(props) {
           
             <div className='innerNavbar'>
                 <div className='logo'>
-                    <h1><Link to="/">ARIF E-KART</Link></h1>
+                    <h1 onClick={()=>navigate("/")}>ARIF E-KART</h1>
                 </div>
                 <div className='navList'>
                     <ul>
@@ -48,14 +48,17 @@ function NavBar(props) {
                     </ul>
                 </div>
                 <div className='cartIcons'>
-                    <div style={itemCount ? {position:"relative",left:"-11px",top:"9px"} : {position:"relative",left:"-11px"}}>
+                    <div className={itemCount ? "arm" : "grm"}>
                         <SlideModal cmd={arif}/><span style={{ position: "relative", top: "-31px",left:"24px", color: "black",fontWeight:"500" }}> {itemCount || ""}</span>
                     </div>
                     <div>
-                        <BsPersonLinesFill style={{ color: "#ff5722", fontSize: "20px", cursor: "pointer" }} onClick={()=> navigate("/user")}/>
+                        <BsPersonCircle style={{ color: "#ff5722", fontSize: "20px", cursor: "pointer" }} onClick={()=> navigate("/user")}/>
                     </div>
                     <div>
-                        <BsGrid3X3GapFill className='menuBtn' style={{ fontSize: "20px", cursor: "pointer" }} onClick={()=>setSidebarOpen(!sidebarOpen)}/>
+                        {
+                            sidebarOpen ?  <BsFillXSquareFill className='menuBtn' style={{ fontSize: "20px", cursor: "pointer" }} onClick={()=>setSidebarOpen(!sidebarOpen)}/> :  <BsGrid3X3GapFill className='menuBtn' style={{ fontSize: "20px", cursor: "pointer" }} onClick={()=>setSidebarOpen(!sidebarOpen)}/>
+                        }
+                       
                     </div>
                 </div>
             </div>

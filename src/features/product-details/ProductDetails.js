@@ -9,6 +9,7 @@ import SkeletonProductCard from '../../components/product-card/SkeletonProductCa
 import { useNavigate } from 'react-router-dom';  
 import TopHeader from '../../components/top-header/TopHeader';
 import Footer from '../../components/footer/Footer';
+import './style.scss'
 
 function ProductDetails(props) {
     const { id } = useParams()
@@ -31,7 +32,7 @@ function ProductDetails(props) {
     return (
         <>
         <TopHeader heading="Product Details"/>
-        <div className='container topCC mt-5 mb-5 '>
+        <div className='container mt-5 mb-5 pdCC'>
             <button onClick={()=>navigate(-1)} style={{background:"black",border:"none",color:"#fff"}} className="btn btn-sm  mb-3 ">Go Back</button>
             
             {!data ? <SkeletonSingleProduct />

@@ -1,6 +1,6 @@
 body{
-  font-family: 'Inter', sans-serif;
-font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif !important;
+font-family: 'Roboto', sans-serif !important;
 }
 
 ::-webkit-scrollbar {

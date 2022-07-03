@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { cartActions } from '../../app/extraReducer/cartSlice';
 import TopHeader from '../../components/top-header/TopHeader';
 import Footer from './../../components/footer/Footer';
+import './style.scss'
 
 function Cart(props) {
     const cartItems = useSelector((state) => state.cart.cartItems);
@@ -28,46 +29,48 @@ function Cart(props) {
     };
 
     return (<>
-        <TopHeader heading="Your Cart"/>
+        <TopHeader heading="Your Cart" />
         <div className="container mt-5 mb-5">
-           
+
             <div className='col-row'>
                 <div className='col-md-12'>
                     {cartItems.length === 0 ? (
-                        <h5 className="text-center">
-                            <BsFillCartXFill style={{ fontSize: "40px", color: "#ff0000b8" }} /><br />
-                            Your cart is empty</h5>
+                        <div className="emptyCart">
+                            <h5 className="text-center">
+                                <BsFillCartXFill style={{ fontSize: "40px", color: "#ff0000b8" }} /><br /><br />
+                                Your cart is empty</h5>
+                        </div>
                     ) : (
                         <div class="container table-responsive py-5">
-                        <table className="table table-bordered ">
-                            <thead style={{textAlign:"center"}}>
-                                <tr>
-                                    <th>Image</th>
-                                    <th>Product Title</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Action</th>
+                            <table className="table table-bordered arif-table">
+                                <thead style={{ textAlign: "center" }}>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Product Title</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Action</th>
 
-                                </tr>
-                            </thead>
-                            <tbody style={{textAlign:"center"}}>
+                                    </tr>
+                                </thead>
+                                <tbody style={{ textAlign: "center" }}>
 
-                                {
-                                    cartItems.map((item) => {
-                                        return <tr key={item.id}>
-                                            <td><img src={item.image} alt="img" width="50" height="50" /></td>
-                                            <td>{item.title.slice(0, 30)}</td>
-                                            <td>{"$"}{item.price}</td>
-                                            <td>{item.quantity}{"x"}</td>
-                                            <td><BsFillTrashFill style={{cursor:"pointer"}} onClick={() => deleteItem(item.id)} /></td>
-                                        </tr>
+                                    {
+                                        cartItems.map((item) => {
+                                            return <tr key={item.id}>
+                                                <td><img src={item.image} alt="img" width="50" height="50" /></td>
+                                                <td>{item.title.slice(0, 30)}</td>
+                                                <td>{"$"}{item.price}</td>
+                                                <td>{item.quantity}{"x"}</td>
+                                                <td><BsFillTrashFill style={{ cursor: "pointer" }} onClick={() => deleteItem(item.id)} /></td>
+                                            </tr>
 
 
-                                    }
+                                        }
 
-                                    )}
-                            </tbody>
-                        </table>
+                                        )}
+                                </tbody>
+                            </table>
                         </div>
                     )}
                 </div>
@@ -82,10 +85,10 @@ function Cart(props) {
                     </h6>
                     <p>Taxes and shipping will calculate at checkout</p>
                     <div className="cart__page-btn">
-                        <button className="btn btn-sm " style={{background:"darkorange",color:"#fff"}} onClick={() => navigate("/all-products")}>
+                        <button className="btn btn-sm " style={{ background: "darkorange", color: "#fff" }} onClick={() => navigate("/all-products")}>
                             Continue Shopping
                         </button>
-                        <button className="btn btn-sm"  onClick={() => navigate("/checkout")} style={{ marginLeft: "10px",background:"black",color:"#fff" }}>
+                        <button className="btn btn-sm" onClick={() => navigate("/checkout")} style={{ marginLeft: "10px", background: "black", color: "#fff" }}>
                             Proceed to checkout
                         </button>
                     </div>
@@ -101,8 +104,8 @@ function Cart(props) {
                 style={{ zIndex: 99999 }}
             />
         </div>
-        <Footer/>
-        </>
+        <Footer />
+    </>
     );
 }
 

@@ -79,7 +79,7 @@ function Home(props) {
                     <div className='row'>
                         <div className='col-md-6 mt-2 mb-5'>
                             <img src={Shoping} alt="img" className='img-fluid' />
-                            <h1 style={{ fontSize: "50px", textAlign: "center", color: "#24226b", fontFamily: "fantasy", letterSpacing: "4px" }}>Welcome to <br />Arif E-kart</h1>
+                            <h1 >Welcome to <br />Arif E-kart</h1>
                         </div>
                     </div>
                 </div>
@@ -127,11 +127,11 @@ function Home(props) {
                                 Electronics
                             </button> */}
                     
-                    <div className='col-md-2 offset-md-1 col-6'><button type="button" className={category === "All" ? " blackBtn fullWidth" : " greyBtn fullWidth"} onClick={() => setFilterData(products)}>All</button></div>
-                    <div className='col-md-2 col-6'><button type="button" className={category === "men's clothing" ? " blackBtn fullWidth" : " greyBtn fullWidth"} onClick={() => filterProducts("men's clothing")}>men's clothing</button></div>
-                    <div className='col-md-2 col-6'><button type="button" className={category === "women's clothing" ? " blackBtn fullWidth" : " greyBtn fullWidth"} onClick={() => filterProducts("women's clothing")}>women's clothing</button></div>
-                    <div className='col-md-2 col-6'><button type="button" className={category === "jewelery" ? " blackBtn fullWidth" : " greyBtn fullWidth"} onClick={() => filterProducts("jewelery")}>Jewelery</button></div>
-                    <div className='col-md-2 col-6'> <button type="button" className={category === "electronics" ? " blackBtn fullWidth" : " greyBtn fullWidth"} onClick={() => filterProducts("electronics")}>Electronics</button></div>
+                    <div className='col-md-2 offset-md-1 col-6'><button type="button" className={category === "All" ? " blackBtn fullWidth shadow-lg" : " greyBtn fullWidth"} onClick={() => setFilterData(products)}>All</button></div>
+                    <div className='col-md-2 col-6'><button type="button" className={category === "men's clothing" ? " blackBtn fullWidth shadow-lg" : " greyBtn fullWidth"} onClick={() => filterProducts("men's clothing")}>men's clothing</button></div>
+                    <div className='col-md-2 col-6'><button type="button" className={category === "women's clothing" ? " blackBtn fullWidth shadow-lg" : " greyBtn fullWidth"} onClick={() => filterProducts("women's clothing")}>women's clothing</button></div>
+                    <div className='col-md-2 col-6'><button type="button" className={category === "jewelery" ? " blackBtn fullWidth shadow-lg" : " greyBtn fullWidth"} onClick={() => filterProducts("jewelery")}>Jewelery</button></div>
+                    <div className='col-md-2 col-6'> <button type="button" className={category === "electronics" ? " blackBtn fullWidth shadow-lg" : " greyBtn fullWidth"} onClick={() => filterProducts("electronics")}>Electronics</button></div>
                 
 
                 </div>

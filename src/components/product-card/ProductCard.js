@@ -41,7 +41,7 @@ function ProductCard({ data }) {
             <div className="card-body">
                 <h6 className="card-title" onClick={() => navigate(`/single-products/${data.id}`)} style={{cursor:"pointer"}}>{data.title.toUpperCase().slice(0,15)}</h6>
                 <p className="card-text">{"$"}{data.price}</p>
-                <button className='btn btn-sm btn-primary' style={{background:"#3f51b5",border:"none"}} onClick={() => addtoCart(data)}>Add to Cart</button>
+                <button className='btn btn-sm btn-primary shadow-lg' style={{background:"#3f51b5",border:"none"}} onClick={() => addtoCart(data)}>Add to Cart</button>
                 {/* <button className="btn btn-link" onClick={() => navigate(`/single-products/${data.id}`)}>view</button> */}
 
             </div>

@@ -35,7 +35,7 @@ function Checkout(props) {
     return (
         <>
             <TopHeader heading="Checkout" />
-            <div className='container topCC mt-5 mb-5'>
+            <div className='container mt-5 mb-5'>
                 <div className="row mt-5">
                     <div className='col-md-7 shipp'>
                         <h3 className="mb-4">Shipping Address</h3>
@@ -96,7 +96,7 @@ function Checkout(props) {
                     </div>
 
                     <div className="col-md-4 offset-md-1">
-                        <div className="checkout__bill">
+                        <div className="checkout__bill shadow-lg">
                             <h6 className="d-flex align-items-center justify-content-between mb-3">
                                 Subtotal: <span>${cartTotalAmount.toFixed(2)}</span>
                             </h6>

@@ -29,7 +29,7 @@ function SingleProduct({ singleData }) {
                 <h5>{"$"}{singleData?.price}</h5>
                 <p>{singleData?.description}</p>
                 <p>Rating : {singleData?.rating?.rate}</p>
-                <button className='btn btn-sm btn-primary' style={{background:"#3f51b5",border:"none"}} onClick={() => addtoCart(singleData)}>Add to Cart</button>
+                <button className='btn btn-sm btn-primary shadow-lg' style={{background:"#3f51b5",border:"none"}} onClick={() => addtoCart(singleData)}>Add to Cart</button>
             </div>
 
             <ToastContainer
